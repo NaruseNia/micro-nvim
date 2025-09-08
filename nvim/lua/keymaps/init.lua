@@ -2,6 +2,7 @@
 vim.keymap.set("n", "<leader>/", ":noh<cr>", { desc = "Clear search" })
 vim.keymap.set("n", "<A-J>", "<cmd>m+1<cr>", { desc = "Swap lower" })
 vim.keymap.set("n", "<A-K>", "<cmd>m-2<cr>", { desc = "Swap upper" })
+vim.keymap.set({ "n", "i" }, "<C-l>", require("actions-preview").code_actions, { desc = "LSP code action" })
 
 -- Neotree
 vim.keymap.set("n", "<leader>e", ":Neotree toggle<CR>", { desc = "Toggle NeoTree" })

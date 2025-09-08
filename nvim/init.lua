@@ -37,4 +37,4 @@ require("keymaps")
 
 -- Color scheme --
 vim.o.background = "dark" -- or "light" for light mode
-vim.cmd([[colorscheme base16-irblack]])
+vim.cmd([[colorscheme kanagawa-dragon]])

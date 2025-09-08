@@ -58,6 +58,8 @@ require("oil").setup({
 	default_file_explorer = true,
 })
 
+add({ source = "aznhe21/actions-preview.nvim" })
+
 add({
 	source = "williamboman/mason.nvim",
 	hooks = {
