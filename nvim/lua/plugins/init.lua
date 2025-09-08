@@ -17,7 +17,6 @@ later(function()
 	require("mini.comment").setup()
 	require("mini.pairs").setup()
 	require("mini.pick").setup()
-	require("mini.surround").setup()
 end)
 
 now(function()
@@ -73,7 +72,7 @@ require("mason").setup({})
 add({
 	source = "williamboman/mason-lspconfig.nvim",
 	hooks = {
-		post_checkout = function()
+		post = function()
 			vim.cmd("MasonUpdate")
 		end,
 	},
