@@ -26,6 +26,12 @@ now(function()
 	})
 end)
 
+add({
+	source = "zbirenbaum/copilot.lua",
+})
+
+require("copilot").setup({})
+
 later(function()
 	add({
 		source = "nvim-treesitter/nvim-treesitter",
@@ -130,6 +136,9 @@ later(function()
 	require("luasnip.loaders.from_lua").lazy_load()
 
 	add({
+		source = "fang2hou/blink-copilot",
+	})
+	add({
 		source = "saghen/blink.cmp",
 		checkout = "v1.6.0",
 		depends = {
@@ -175,7 +184,3 @@ later(function()
 	})
 	c.load_conf("bufferin")
 end)
-add({
-	source = "zbirenbaum/copilot.lua",
-})
-require("copilot").setup({})
