@@ -9,7 +9,7 @@ end)
 now(function()
 	require("mini.icons").setup()
 	require("mini.tabline").setup()
-	require("mini.statusline").setup()
+	-- require("mini.statusline").setup()
 end)
 
 later(function()
@@ -38,7 +38,6 @@ later(function()
 		},
 	})
 	require("nvim-treesitter.configs").setup({
-		ensure_installed = { "lua", "vimdoc" },
 		highlight = { enable = true },
 	})
 end)
@@ -56,6 +55,12 @@ add({ source = "stevearc/oil.nvim" })
 require("oil").setup({
 	default_file_explorer = true,
 })
+
+add({
+	source = "nvim-lualine/lualine.nvim",
+	depends = { "nvim-tree/nvim-web-devicons" },
+})
+c.load_conf("lualine")
 
 add({ source = "aznhe21/actions-preview.nvim" })
 
@@ -86,7 +91,10 @@ require("mason-lspconfig").setup({
 })
 
 add({ source = "rebelot/kanagawa.nvim" })
-add({ source = "RRethy/base16-nvim" })
+add({ source = "nyoom-engineering/oxocarbon.nvim" })
+add({ source = "dgox16/oldworld.nvim" })
+add({ source = "vague2k/vague.nvim" })
+require("vague").setup({})
 add({ source = "zaldih/themery.nvim" })
 require("themery").setup({
 	themes = vim.fn.getcompletion("", "color"),
@@ -123,6 +131,7 @@ later(function()
 
 	add({
 		source = "saghen/blink.cmp",
+		checkout = "v1.6.0",
 		depends = {
 			"L3MON4D3/LuaSnip",
 		},
@@ -155,3 +164,18 @@ later(function()
 	c.load_conf("glance")
 end)
 add({ source = "mrcjkb/rustaceanvim" })
+add({ source = "kazhala/close-buffers.nvim" })
+
+later(function()
+	add({
+		source = "wasabeef/bufferin.nvim",
+		depends = {
+			"nvim-tree/nvim-web-devicons",
+		},
+	})
+	c.load_conf("bufferin")
+end)
+add({
+	source = "zbirenbaum/copilot.lua",
+})
+require("copilot").setup({})
