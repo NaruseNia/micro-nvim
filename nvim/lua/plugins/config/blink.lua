@@ -47,27 +47,27 @@ require("blink-cmp").setup({
 	appearance = {
 		-- Blink does not expose its default kind icons so you must copy them all (or set your custom ones) and add Copilot
 		kind_icons = {
-			Copilot = "",
+			Copilot = "",
 			Text = "󰉿",
 			Method = "󰆧",
 			Function = "󰆨",
 			Constructor = "󰒓",
 
-			Field = "󰜢",
+			Field = "",
 			Variable = "󰆦",
 			Property = "󰖷",
 
-			Class = "󱡠",
-			Interface = "󱡠",
-			Struct = "󱡠",
-			Module = "󰅩",
+			Class = "",
+			Interface = "",
+			Struct = "",
+			Module = "󰮄",
 
 			Unit = "󰪚",
 			Value = "󰦨",
-			Enum = "󰦨",
-			EnumMember = "󰦨",
+			Enum = "",
+			EnumMember = "",
 
-			Keyword = "󰻾",
+			Keyword = "",
 			Constant = "󰏿",
 
 			Snippet = "󱄽",

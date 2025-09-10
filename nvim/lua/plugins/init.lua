@@ -29,7 +29,6 @@ end)
 add({
 	source = "zbirenbaum/copilot.lua",
 })
-
 require("copilot").setup({})
 
 later(function()
@@ -127,26 +126,24 @@ add({
 })
 add({ source = "jay-babu/mason-null-ls.nvim" })
 
-later(function()
-	add({
-		source = "L3MON4D3/LuaSnip",
-	})
-	require("luasnip").setup({})
-	require("luasnip.loaders.from_snipmate").lazy_load()
-	require("luasnip.loaders.from_lua").lazy_load()
+add({
+	source = "L3MON4D3/LuaSnip",
+})
+require("luasnip").setup({})
+require("luasnip.loaders.from_snipmate").lazy_load()
+require("luasnip.loaders.from_lua").lazy_load()
 
-	add({
-		source = "fang2hou/blink-copilot",
-	})
-	add({
-		source = "saghen/blink.cmp",
-		checkout = "v1.6.0",
-		depends = {
-			"L3MON4D3/LuaSnip",
-		},
-	})
-	c.load_conf("blink")
-end)
+add({
+	source = "fang2hou/blink-copilot",
+})
+add({
+	source = "saghen/blink.cmp",
+	checkout = "v1.6.0",
+	depends = {
+		"L3MON4D3/LuaSnip",
+	},
+})
+c.load_conf("blink")
 
 later(function()
 	add({ source = "lewis6991/hover.nvim" })
@@ -158,10 +155,8 @@ later(function()
 	c.load_conf("flash")
 end)
 
-later(function()
-	add({ source = "akinsho/toggleterm.nvim" })
-	c.load_conf("toggleterm")
-end)
+add({ source = "akinsho/toggleterm.nvim" })
+c.load_conf("toggleterm")
 
 later(function()
 	add({ source = "stevearc/conform.nvim" })
